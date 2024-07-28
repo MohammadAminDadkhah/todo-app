@@ -1,10 +1,11 @@
 import React, {useState} from "react";
-import {Link, redirect} from "react-router-dom";
+import {Link, redirect, useNavigate} from "react-router-dom";
 import Layout from "../Layout";
 
 const members = JSON.parse(localStorage.getItem('members'));
 
 export default function Login() {
+   const ShowTodo = useNavigate();
    const [login, setLogin] = useState({
       username: undefined,
       password: undefined,
@@ -34,25 +35,35 @@ export default function Login() {
          }, 2000);
       } else {
          localStorage.setItem("loginUser", JSON.stringify(user));
-         redirect("/ShowTodo");
+         // eslint-disable-next-line react-hooks/rules-of-hooks
+         ShowTodo("/ShowTodo")
       }
    }
 
    return <>
-      <div className="main-div w-fit">
+      {!members && <div className="main-div w-1/3 items-center">
+         <p>There is no user defined.</p>
+         <Link className="btn w-fit bg-[#071952] border-[#071952] text-[#EBF4F6] w-20" to="/CreateUser">Add User</Link>
+      </div>}
+      {members && <div className="main-div w-fit">
          <form className="flex flex-col">
             <p>Enter Username</p>
-            <input name="username" className="rounded text-[#071952] px-2 p-1 mb-4 mt-1" onChange={getFormInput} type="text"/>
+            <input name="username" className="rounded text-[#071952] px-2 p-1 mb-4 mt-1" onChange={getFormInput}
+                   type="text"/>
 
             <p>Enter Password</p>
-            <input name="password" className="rounded text-[#071952] px-2 p-1 mb-4 mt-1" onChange={getFormInput} type="password"/>
+            <input name="password" className="rounded text-[#071952] px-2 p-1 mb-4 mt-1" onChange={getFormInput}
+                   type="password"/>
 
             <div className="flex gap-2">
-               <button className="btn bg-[#071952] border-[#071952] text-[#EBF4F6] w-20" type="button" onClick={loginHandler}>Login</button>
-               <Link to="/" className="btn bg-[#D71313] border-[#D71313] text-[#EBF4F6] w-20 text-center" type="submit">Back</Link>
+               <button className="btn bg-[#071952] border-[#071952] text-[#EBF4F6] w-20" type="button"
+                       onClick={loginHandler}>Login
+               </button>
+               <Link to="/" className="btn bg-[#D71313] border-[#D71313] text-[#EBF4F6] w-20 text-center"
+                     type="submit">Back</Link>
             </div>
          </form>
          {showError && <div className="text-red-600">{login.error}</div>}
-      </div>
+      </div>}
    </>
 }
