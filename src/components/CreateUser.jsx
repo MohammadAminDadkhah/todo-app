@@ -1,27 +1,28 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from "react-router-dom";
+import {Link, useNavigate} from "react-router-dom";
 
 export default function CreateUser() {
     const [members, setMembers] = useState(JSON.parse(localStorage.getItem("members")) || []);
+    const navigate = useNavigate();
 
     useEffect(() => {
         localStorage.setItem("members", JSON.stringify(members));
     }, [members]);
 
-    const newUserHandler = (event) => {
-        event.preventDefault();
+    const newUserHandler = (e) => {
+        e.preventDefault();
 
-        const username = event.target.username.value;
-        const age = event.target.age.value;
-        const password = event.target.password.value;
+        const username = e.target.username.value;
+        const age = e.target.age.value;
+        const password = e.target.password.value;
 
         const usernameExists = members.some((member) => member.username === username);
 
         if (usernameExists) {
             alert("Username already exists!");
-            event.target.username.value = "";
-            event.target.age.value = "";
-            event.target.password.value = ""
+            e.target.username.value = "";
+            e.target.age.value = "";
+            e.target.password.value = ""
             return;
         }
 
@@ -34,14 +35,13 @@ export default function CreateUser() {
                 password: password,
             };
             setMembers([...members, newMember]);
-            console.log(members);
             window.location.href = "/"
         } else
             alert("Enter all parameter")
     }
 
-    return <div className="main-div w-fit">
-        <form onSubmit={(event) => {newUserHandler(event)}}
+    return <div className="main-div w-fit mx-auto">
+        <form onSubmit={(e) => {newUserHandler(e)}}
               className="flex flex-col">
 
             <p>Enter Age</p>

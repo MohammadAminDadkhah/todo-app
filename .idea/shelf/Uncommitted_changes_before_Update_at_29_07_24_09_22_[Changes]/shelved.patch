@@ -1,0 +1,121 @@
+Index: src/components/Zizi.jsx
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>import {redirect, useNavigate} from \"react-router-dom\";\n\nexport default function Zizi() {\n    // console.log(useParams())\n    // console.log(useLocation())\n    const a = useNavigate();\n    const click = () => {\n        a(\"/Login\");\n    }\n    return (<h1 onClick={click}>b</h1>);\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/components/Zizi.jsx b/src/components/Zizi.jsx
+--- a/src/components/Zizi.jsx	(revision 019a786b2e8e21a0d5beeaba28ae7a5e7a0f9cb9)
++++ b/src/components/Zizi.jsx	(date 1722173354129)
+@@ -6,6 +6,7 @@
+     const a = useNavigate();
+     const click = () => {
+         a("/Login");
++
+     }
+     return (<h1 onClick={click}>b</h1>);
+ }
+\ No newline at end of file
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<project version=\"4\">\n  <component name=\"AutoImportSettings\">\n    <option name=\"autoReloadType\" value=\"SELECTIVE\" />\n  </component>\n  <component name=\"ChangeListManager\">\n    <list default=\"true\" id=\"0cb88e2b-2407-4688-a080-381115eccdf6\" name=\"Changes\" comment=\"\">\n      <change afterPath=\"$PROJECT_DIR$/src/Layout.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/package-lock.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package-lock.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/package.json\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/package.json\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/favicon.ico\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/index.html\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/public/index.html\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/logo192.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/logo512.png\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/public/robots.txt\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/App.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/App.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/App.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/App.test.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/index.css\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/index.css\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/index.js\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/src/index.js\" afterDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/logo.svg\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/reportWebVitals.js\" beforeDir=\"false\" />\n      <change beforePath=\"$PROJECT_DIR$/src/setupTests.js\" beforeDir=\"false\" />\n    </list>\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\n  </component>\n  <component name=\"FileTemplateManagerImpl\">\n    <option name=\"RECENT_TEMPLATES\">\n      <list>\n        <option value=\"JavaScript File\" />\n        <option value=\"JSX File\" />\n      </list>\n    </option>\n  </component>\n  <component name=\"Git.Settings\">\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\n  </component>\n  <component name=\"ProjectColorInfo\"><![CDATA[{\n  \"customColor\": \"\",\n  \"associatedIndex\": 2\n}]]></component>\n  <component name=\"ProjectId\" id=\"2jrdUMpalutjj2VdlDgwdQFTcI1\" />\n  <component name=\"ProjectLevelVcsManager\">\n    <ConfirmationsSetting value=\"1\" id=\"Add\" />\n  </component>\n  <component name=\"ProjectViewState\">\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\n    <option name=\"showLibraryContents\" value=\"true\" />\n  </component>\n  <component name=\"PropertiesComponent\"><![CDATA[{\n  \"keyToString\": {\n    \"ASKED_SHARE_PROJECT_CONFIGURATION_FILES\": \"true\",\n    \"RunOnceActivity.ShowReadmeOnStart\": \"true\",\n    \"git-widget-placeholder\": \"master\",\n    \"node.js.detected.package.eslint\": \"true\",\n    \"node.js.detected.package.tslint\": \"true\",\n    \"node.js.selected.package.eslint\": \"(autodetect)\",\n    \"node.js.selected.package.tslint\": \"(autodetect)\",\n    \"nodejs_package_manager_path\": \"npm\",\n    \"ts.external.directory.path\": \"/home/mohap/Desktop/WebStorm-2024.1.5/WebStorm-241.18034.50/plugins/javascript-plugin/jsLanguageServicesImpl/external\",\n    \"vue.rearranger.settings.migration\": \"true\"\n  }\n}]]></component>\n  <component name=\"SharedIndexes\">\n    <attachedChunks>\n      <set>\n        <option value=\"bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50\" />\n      </set>\n    </attachedChunks>\n  </component>\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\n  <component name=\"TaskManager\">\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\n      <changelist id=\"0cb88e2b-2407-4688-a080-381115eccdf6\" name=\"Changes\" comment=\"\" />\n      <created>1722149146074</created>\n      <option name=\"number\" value=\"Default\" />\n      <option name=\"presentableId\" value=\"Default\" />\n      <updated>1722149146074</updated>\n      <workItem from=\"1722149149616\" duration=\"21451000\" />\n    </task>\n    <servers />\n  </component>\n  <component name=\"TypeScriptGeneratedFilesManager\">\n    <option name=\"version\" value=\"3\" />\n  </component>\n  <component name=\"XDebuggerManager\">\n    <breakpoint-manager>\n      <breakpoints>\n        <line-breakpoint enabled=\"true\" type=\"javascript\">\n          <url>file://$PROJECT_DIR$/src/components/Home.jsx</url>\n          <line>2</line>\n          <properties lambdaOrdinal=\"-1\" />\n          <option name=\"timeStamp\" value=\"2\" />\n        </line-breakpoint>\n      </breakpoints>\n    </breakpoint-manager>\n  </component>\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/.idea/workspace.xml b/.idea/workspace.xml
+--- a/.idea/workspace.xml	(revision 019a786b2e8e21a0d5beeaba28ae7a5e7a0f9cb9)
++++ b/.idea/workspace.xml	(date 1722173458067)
+@@ -5,22 +5,8 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="0cb88e2b-2407-4688-a080-381115eccdf6" name="Changes" comment="">
+-      <change afterPath="$PROJECT_DIR$/src/Layout.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/logo192.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/logo512.png" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/public/robots.txt" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
++      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
++      <change beforePath="$PROJECT_DIR$/src/components/Zizi.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Zizi.jsx" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -38,10 +24,10 @@
+   <component name="Git.Settings">
+     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+   </component>
+-  <component name="ProjectColorInfo"><![CDATA[{
+-  "customColor": "",
+-  "associatedIndex": 2
+-}]]></component>
++  <component name="ProjectColorInfo">{
++  &quot;customColor&quot;: &quot;&quot;,
++  &quot;associatedIndex&quot;: 2
++}</component>
+   <component name="ProjectId" id="2jrdUMpalutjj2VdlDgwdQFTcI1" />
+   <component name="ProjectLevelVcsManager">
+     <ConfirmationsSetting value="1" id="Add" />
+@@ -50,20 +36,20 @@
+     <option name="hideEmptyMiddlePackages" value="true" />
+     <option name="showLibraryContents" value="true" />
+   </component>
+-  <component name="PropertiesComponent"><![CDATA[{
+-  "keyToString": {
+-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+-    "RunOnceActivity.ShowReadmeOnStart": "true",
+-    "git-widget-placeholder": "master",
+-    "node.js.detected.package.eslint": "true",
+-    "node.js.detected.package.tslint": "true",
+-    "node.js.selected.package.eslint": "(autodetect)",
+-    "node.js.selected.package.tslint": "(autodetect)",
+-    "nodejs_package_manager_path": "npm",
+-    "ts.external.directory.path": "/home/mohap/Desktop/WebStorm-2024.1.5/WebStorm-241.18034.50/plugins/javascript-plugin/jsLanguageServicesImpl/external",
+-    "vue.rearranger.settings.migration": "true"
++  <component name="PropertiesComponent">{
++  &quot;keyToString&quot;: {
++    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
++    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
++    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
++    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
++    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
++    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
++    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
++    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
++    &quot;ts.external.directory.path&quot;: &quot;/home/mohap/Desktop/WebStorm-2024.1.5/WebStorm-241.18034.50/plugins/javascript-plugin/jsLanguageServicesImpl/external&quot;,
++    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+   }
+-}]]></component>
++}</component>
+   <component name="SharedIndexes">
+     <attachedChunks>
+       <set>
+@@ -79,7 +65,8 @@
+       <option name="number" value="Default" />
+       <option name="presentableId" value="Default" />
+       <updated>1722149146074</updated>
+-      <workItem from="1722149149616" duration="21451000" />
++      <workItem from="1722149149616" duration="21719000" />
++      <workItem from="1722173352213" duration="106000" />
+     </task>
+     <servers />
+   </component>
+@@ -92,7 +79,6 @@
+         <line-breakpoint enabled="true" type="javascript">
+           <url>file://$PROJECT_DIR$/src/components/Home.jsx</url>
+           <line>2</line>
+-          <properties lambdaOrdinal="-1" />
+           <option name="timeStamp" value="2" />
+         </line-breakpoint>
+       </breakpoints>

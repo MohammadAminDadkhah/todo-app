@@ -2,7 +2,7 @@ import {Link} from "react-router-dom";
 
 const Home = () => {
     return <>
-        <div className="main-div w-1/2">
+        <div className="main-div w-1/2 mx-auto">
             <div>
                 <Link className="flex justify-center mb-3 sm:text-4xl" to="/">React App</Link>
                 <p className="text-xs sm:text-2xl">Mohap Todo App</p>

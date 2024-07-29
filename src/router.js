@@ -4,7 +4,9 @@ import Login from "./components/Login";
 import CreateUser from "./components/CreateUser";
 import ShowTodo from "./components/ShowTodo";
 import Layout from "./Layout";
-import Zizi from "./components/Zizi";
+import {UserTodo} from "./components/UserTodo";
+import {AddTodo} from "./components/AddTodo";
+import {EditProfile} from "./components/EditProfile";
 
 export const router = createHashRouter([
     {
@@ -27,8 +29,16 @@ export const router = createHashRouter([
                 element: <ShowTodo/>,
                 children: [
                     {
-                        path: "/ShowTodo/:id",
-                        element: <Zizi />
+                        path: "/ShowTodo/UserTodo",
+                        element: <UserTodo />
+                    },
+                    {
+                        path: "/ShowTodo/AddTodo",
+                        element: <AddTodo />
+                    },
+                    {
+                        path: "/ShowTodo/EditProfile",
+                        element: <EditProfile />
                     }
                 ]
             },

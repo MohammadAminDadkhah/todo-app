@@ -1,18 +1,30 @@
 import './App.css';
-import {Link, Outlet} from "react-router-dom";
+import {Outlet} from "react-router-dom";
+import LoginUserContext from "./components/contextAPI/LoginUserContext";
 
 function Layout() {
-    console.log(arguments)
-    return <div>
-        <h1>
-            Header
-            <Link to="/Login">asd</Link>
-        </h1>
-        <Outlet />
-        <h1>
-            footer
-        </h1>
-    </div>
+    return (
+        <LoginUserContext>
+            <Outlet/>
+        </LoginUserContext>
+    )
+
 }
 
+{/*<h1>*/
+}
+{/*    Header*/
+}
+{/*    <Link to="/Login">asd</Link>*/
+}
+{/*</h1>*/
+}
+{/*<Outlet />*/
+}
+{/*<h1>*/
+}
+{/*    footer*/
+}
+{/*</h1>*/
+}
 export default Layout;
