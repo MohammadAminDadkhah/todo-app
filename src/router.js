@@ -7,6 +7,7 @@ import Layout from "./Layout";
 import {UserTodo} from "./components/UserTodo";
 import {AddTodo} from "./components/AddTodo";
 import {EditProfile} from "./components/EditProfile";
+import {UserEdit} from "./components/UserEdit";
 
 export const router = createHashRouter([
     {
@@ -38,7 +39,13 @@ export const router = createHashRouter([
                     },
                     {
                         path: "/ShowTodo/EditProfile",
-                        element: <EditProfile />
+                        element: <EditProfile />,
+                        children:[
+                            {
+                                path: "/ShowTodo/EditProfile/UserEdit",
+                                element: <UserEdit />
+                            }
+                        ]
                     }
                 ]
             },

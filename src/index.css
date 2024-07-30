@@ -7,7 +7,7 @@ body {
 }
 .main-div {
     @apply bg-[#EBF4F6] flex flex-col justify-center
-        p-8 gap-4 shadow-xl rounded-md text-[#071952]
+        p-5 gap-4 shadow-xl rounded-md text-[#071952]
         mt-[20%];
 }
 

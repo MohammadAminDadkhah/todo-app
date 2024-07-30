@@ -1,13 +1,13 @@
-import React, {useContext} from "react";
+import React from "react";
 import {Link, Outlet} from "react-router-dom";
-import {LoginUser} from "./contextAPI/LoginUserContext";
+import {useSelector} from "react-redux";
 
 export default function ShowTodo() {
-    const userContext = useContext(LoginUser);
+    const userLogin = useSelector(state => state.login);
 
     return <div className="flex flex-row mx-auto justify-center gap-6">
         <div className="main-div w-fit">
-            <h1 className="text-center">You log in as {userContext.user.username.toUpperCase()}</h1>
+            <h1 className="text-center">You log in as {userLogin.username.toUpperCase()}</h1>
 
             <span className="border-b-2 border-[#478CCF]"/>
 
@@ -23,6 +23,6 @@ export default function ShowTodo() {
                 </div>
             </div>
         </div>
-        <Outlet />
+        <Outlet/>
     </div>
 }

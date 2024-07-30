@@ -1,16 +1,19 @@
-import React, { useContext, useState} from "react";
+import React, {useState} from "react";
 import {Link, useNavigate} from "react-router-dom";
-import {LoginUser} from "./contextAPI/LoginUserContext";
+import {useDispatch, useSelector} from "react-redux";
+import {setLoginCurrentUser} from "./store/setLoginUser";
 
 const members = JSON.parse(localStorage.getItem('members'));
+const error = "wrong username or password";
 
 export default function Login() {
-    const loginUser = useContext(LoginUser);
-    const ShowTodo = useNavigate();
+    const loginUser = useSelector(state => state.setLogin);
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+
     const [login, setLogin] = useState({
         username: undefined,
         password: undefined,
-        error: undefined
     })
 
     const [showError, setShowError] = useState(false);
@@ -18,7 +21,7 @@ export default function Login() {
     const getFormInput = (event) => {
         setLogin(x => ({
             ...x,
-            [event.target.name]: event.target.value
+            [event.target.name]: event.target.value,
         }))
     }
 
@@ -26,18 +29,17 @@ export default function Login() {
         let user = members.find((member) => member.username === login.username && member.password === login.password);
 
         if (!user) {
-            setLogin(x => ({
-                ...x,
-                error: "wrong username or password"
-            }))
             setShowError(true);
+
             setTimeout(() => {
                 setShowError(false);
             }, 2000);
-        } else {
-            loginUser.setUser(login);
-            ShowTodo("/ShowTodo");
+
+            return;
         }
+
+        dispatch(setLoginCurrentUser(user));
+        navigate("/ShowTodo");
     }
 
     return <>
@@ -63,7 +65,7 @@ export default function Login() {
                           type="submit">Back</Link>
                 </div>
             </form>
-            {showError && <div className="text-red-600">{login.error}</div>}
+            {showError && <div className="text-red-600">{error}</div>}
         </div>}
     </>
 }

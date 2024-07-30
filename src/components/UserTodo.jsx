@@ -12,29 +12,29 @@ export function UserTodo() {
     }
 
     return (
-        <div className="main-div">
-            <button className="text-xl text-[#999]" onClick={close}>x</button>
+        <div className="main-div w-1/3 ">
             {todos.length === 0 ? <div>There is no task available.</div> : null}
-            {todos.length !== 0 && <div>
+            {todos.length !== 0 && <table className="table-fixed">
                 <thead>
-                    <tr>
-                    <th>Task</th>
-                    <th>Date</th>
-                    <th>Status</th>
-                    </tr>
+                <tr>
+                    <th className="border-2 border-t-0 border-b-gray-900">Task</th>
+                    <th className="border-2 border-t-0 border-b-gray-900">Date</th>
+                    <th className="border-2 border-t-0 border-b-gray-900">Status</th>
+                </tr>
                 </thead>
                 <tbody>
-                    {
-                        todos.map((item, index) =>
-                            <tr>
-                                <td>{item.todo}</td>
-                                <td>{item.remainingDate}</td>
-                                <td>{item.status ? 'Done' : 'Pending'}</td>
-                            </tr>
-                        )
-                    }
+                {
+                    todos.map((item, index) =>
+                        <tr key={index}>
+                            <td className="border-2 ext-center border-b-gray-900">{item.todo}</td>
+                            <td className="border-2 text-center border-b-gray-900">{item.remainingDate}</td>
+                            <td className="border-2 text-center border-b-gray-900">{item.status ? 'Done' : 'Pending'}</td>
+                        </tr>
+                    )
+                }
                 </tbody>
-            </div>}
+            </table>}
+            <button className="text-xl text-[#999] w-fit mx-auto" onClick={close}>Close</button>
         </div>
     );
 
